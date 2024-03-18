@@ -38,7 +38,7 @@ asciifetch [-r|--random] [-n|--name <ascii_name>] [-l|--list] [-h|--help]
 ### Display a Random ASCII Art
 
 ```bash
-asciifetch
+asciifetch -r
 ```
 
 ### Display a Specific ASCII Art
