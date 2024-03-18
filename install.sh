@@ -61,7 +61,7 @@ tput bold setaf 7 && echo "asciifetch"
 tput sgr0
 
 # Running asciifetch with the random option
-./asciifetch -r
+asciifetch -r
 
 # Installation complete message
 echo -e "\nInstallation complete. Enjoy using asciifetch!"
