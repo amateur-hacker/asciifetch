@@ -2,6 +2,10 @@
 
 asciifetch is a command-line tool that displays system information along with ASCII art. It allows users to customize the ASCII art displayed and provides options to show system details in a visually appealing manner.
 
+## Preview
+
+![asciifetch Preview](preview.png)
+
 ## Features
 
 ### ASCII Art Selection
@@ -59,22 +63,11 @@ asciifetch -l
 
 ## Installation
 
-1. Clone the repository:
+### Quick Installation via Curl
 
-   ```bash
-   git clone https://github.com/amateur-hacker/asciifetch.git
-   ```
-
-2. Navigate to the `asciifetch` directory:
-
-   ```bash
-   cd asciifetch
-   ```
-
-3. Run the script:
-   ```bash
-   ./install.sh
-   ```
+```bash
+curl -Ls https://raw.githubusercontent.com/amateur-hacker/asciifetch/master/install.sh | bash
+```
 
 ## Contributing
 
