@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Copying asciifetch script to the user's local bin directory
-echo "Copying asciifetch script to $HOME/.local/bin"
-sleep 1s
-rsync -arvP ./asciifetch "$HOME/.local/bin/"
-
 # Function to install boxes based on the package manager available
 install_boxes() {
     local package_manager
@@ -46,6 +41,18 @@ install_boxes() {
 # Installing boxes
 echo "Installing boxes..."
 install_boxes
+
+# Check if ~/.local/bin directory exists, if not, create it
+if [ ! -d "$HOME/.local/bin" ]; then
+    echo "Creating $HOME/.local/bin directory..."
+    mkdir -p "$HOME/.local/bin"
+fi
+
+# Copying asciifetch script to the user's local bin directory
+echo "Copying asciifetch script to $HOME/.local/bin"
+sleep 1s
+curl -Ls https://raw.githubusercontent.com/amateur-hacker/asciifetch/master/asciifetch -o "$HOME/.local/bin/asciifetch"
+chmod +x "$HOME/.local/bin/asciifetch"
 
 # Displaying CLI name
 tput setaf 12 && echo -ne "\nProgram CLI name: "
