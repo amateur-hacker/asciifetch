@@ -16,9 +16,6 @@ install_boxes() {
     # Check if paru is available (Arch-based)
     elif command -v paru &>/dev/null; then
         package_manager="paru"
-    # Check if brew is available (Mac)
-    elif command -v brew &>/dev/null; then
-      package_manager="brew"
     else
         echo "Error: No compatible package manager found." >&2
         exit 1
@@ -37,9 +34,6 @@ install_boxes() {
             ;;
         paru)
             paru -S boxes --noconfirm
-            ;;
-        brew)
-            brew install boxes
             ;;
     esac
 }
